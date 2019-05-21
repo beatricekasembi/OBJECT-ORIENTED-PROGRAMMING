@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,18 +29,22 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-//        Human student = new Human("Beatrice", 20, 60);
+        Human student = new Human("Beatrice", 20, 60);
 //
-//        student.speak("This is so good!");
+//        student.speak("Awesomeness is you!!");
 //        student.eat();
 //        student.sleep();
 //        student.sleep(9);
-//        student.birthday(20);
+//        student.birthday();
+//        Log.d("Human","student age is " + student.getAge());
 
-
-        Beatrice collegue = new Beatrice("james", 30,6, 5);
+        Beatrice collegue = new Beatrice ("Betty",26,50,9);
         collegue.eat();
-        collegue.birthday(21);
+        Log.d("Human","Beatrice's new weight is " + collegue.getWeight());
+        collegue.birthday();
+        Log.d("Beatrice","Beatrice's new age is " + collegue.getAge());
+
+
 
 
 

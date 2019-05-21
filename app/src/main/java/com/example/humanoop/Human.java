@@ -45,13 +45,15 @@ public class Human {
 
     public void speak(String speech){
 
-        Log.d("Human","Be fearless in pursuit of what sets your soul on fire");
+        Log.d("Human",speech);
     }
 
     public void sleep(int hours){Log.d("Human","I am sleeping for " + hours + " " + "hours");}
 
-    public void birthday (int currentAge){ Log.d("Human","I am turning " + (currentAge + 1) );
-
+    public void birthday() {
+        int age = getAge();
+        age = age + 1;
+        setAge(age);
     }
 
 }

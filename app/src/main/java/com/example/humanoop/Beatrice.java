@@ -24,12 +24,18 @@ public class Beatrice extends Human {
         this.height = height;
     }
 
-    public void eat(int currentWeight) {
+    @Override
+    public void eat() {
         super.eat();
-        Log.d("Beatrice", "I am eating food and i am adding" + (currentWeight + 1) + "kgs"); }
+        int beatriceWeight = getWeight();
+        beatriceWeight = beatriceWeight + 2;
+        setWeight(beatriceWeight);
+    }
 
-     public void birthday(int currentBirthday){Log.d("Beatrice", "I will be turning" + " "+ currentBirthday + 4 );
-     }
-
-
+    @Override
+    public void birthday() {
+        int newAge = getAge();
+        newAge = newAge + 4;
+        setAge(newAge);
+    }
 }
